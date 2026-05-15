@@ -43,6 +43,25 @@ class Product(models.Model):
         auto_now_add=True
     )
 
+    brand = models.CharField(
+    max_length=255,
+    blank=True,
+    null=True
+    )
+
+    stock = models.IntegerField(
+        default=0
+    )
+
+    rating = models.FloatField(
+        default=0
+    )
+
+    tags = models.JSONField(
+        default=list,
+        blank=True
+    )
+
     def __str__(self):
 
         return self.name

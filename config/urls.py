@@ -35,7 +35,13 @@ urlpatterns = [
 path(
     'api/cart/',
     include('cart.urls')
+),
+
+path(
+    'api/assistant/',
+    include('assistant.urls')
 )
+
 ]
 
 
