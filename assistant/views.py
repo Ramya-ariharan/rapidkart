@@ -219,7 +219,7 @@ class ShoppingAssistantView(APIView):
         # SEARCH SIMILAR PRODUCTS
         # -----------------------------------------
 
-        k = 20
+        k = 20 #top 20 matches
 
         distances, indices = index.search(
             np.array(query_embedding).astype('float32'),
@@ -242,7 +242,7 @@ class ShoppingAssistantView(APIView):
 
         scored_products = []
 
-        for i, idx in enumerate(indices[0]):
+        for i, idx in enumerate(indices[0]):#np 2d array thats why 0 so first query embedding
             product = product_list[int(idx)]
             product_text = (
                 product.name.lower() + " " + product.description.lower()

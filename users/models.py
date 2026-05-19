@@ -71,3 +71,15 @@ class DeliveryOTP(models.Model):
     def __str__(self):
 
         return f"{self.phone} - {self.otp}"
+    
+
+
+
+
+
+#     {
+#     "email": "ramya@gmail.com",
+#     "phone": "9876543210",
+#     "password": "ramya123",
+#     "role": "customer"
+# }
